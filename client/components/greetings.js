@@ -3,7 +3,9 @@ import React from 'react';
 export default class Greetings extends React.Component{
     render(){
         return(
-            <h1>Hi</h1>
+            <div className="jumbotron">
+                <h1>Hola</h1>
+            </div>
         );
     }
 }
