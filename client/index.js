@@ -1,17 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import {BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Router, browserHistory } from 'react-router';
 
-import App from './components/App';
-import Greetings from './components/greetings';
-import SignupPage from './components/signup/signUpPage'
+import routes from './routes';
 
-render(
-    <Router>
-        <div>
-            <Route path="/" component={App} />
-            <Route exact component={Greetings} />
-            <Route path="/signup" component={SignupPage} />
-        </div>
-    </Router>, document.getElementById('app')
- );
+render(<Router history={browserHistory} routes={routes} />, document.getElementById('app'));
