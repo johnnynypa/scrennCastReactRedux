@@ -10,7 +10,7 @@ export function validateInput(data){
     if(validator.isNull(data.email)){
         errors.email = "This field is required"
     }
-    if(validator.isEmail(data.email)){
+    if(!validator.isEmail(data.email)){
         errors.email = "Email is invalid"
     }
     if(validator.isNull(data.password)){
